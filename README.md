@@ -4,4 +4,4 @@ This is a simple web application that allows people to add different kinds of bu
 
 The purpose of this project was to leverage handlebars view templates with an Express and MySQL backend.
 
-This project is deployed on (Heroku)[https://bks-burger.herokuapp.com/]
+This project is deployed on (https://bks-burger.herokuapp.com/)[Heroku]
