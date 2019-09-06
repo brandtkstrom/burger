@@ -2,7 +2,7 @@ const express = require('express');
 const orm = require('../config/orm')
 const router = express.Router();
 
-router.get('/', (req,res) => {
+router.get('/', (req, res) => {
 
     // Callback used to render burgers
     const renderBurgers = (err, data) => {
@@ -20,6 +20,14 @@ router.get('/', (req,res) => {
 
     // Find all burgers in the DB
     orm.selectAll(renderBurgers);
+});
+
+router.post('/:burger', (req, res) => {
+    if (!req.params.burger) {
+        res.status(422).send('Missing burger name.');
+    }
+
+    orm.insertOne(req.params.burger);
 });
 
 module.exports = router;
