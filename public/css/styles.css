@@ -42,3 +42,12 @@ form #submit-burger {
     padding: 10px 20px;
     cursor: pointer;
 }
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+

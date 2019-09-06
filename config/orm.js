@@ -7,16 +7,22 @@ const checkForError = err => {
 };
 
 const ORM = {
-    selectAll: () => {
-        // TODO - DB select all
-        DB.query('SELECT * FROM burgers', (err, data) => {
-            checkForError(err);
-            return data;
-        });
+    // Select all burgers from the DB
+    selectAll: (callback) => {
+        return DB.query('SELECT * FROM burgers', callback);
     },
-    insertOne: () => {
+    // Insert new burger into the DB
+    insertOne: burgerName => {
         // TODO - DB insert one
+        DB.query(
+            'INSERT INTO burgers (burger_name) VALUES ?',
+            burgerName,
+            err => {
+                checkForError(err);
+            }
+        );
     },
+    // Update existing burger in the DB
     updateOne: () => {
         // TODO DB update one
     }

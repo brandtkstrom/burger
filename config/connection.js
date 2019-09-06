@@ -8,13 +8,14 @@ const localConfig = {
     database: 'burgers_db'
 };
 
-const dbConfig = mysql.env.JAWSDB_URL || localConfig;
+const dbConfig =
+    mysql.env && mysql.env.JAWSDB_URL ? mysql.env.JAWSDB_URL : localConfig;
 
 const DB = mysql.createConnection(dbConfig);
 
 DB.connect(err => {
     if (err) throw err;
-    console.log("Successfully connected to database.");
+    console.log('Successfully connected to database.');
 });
 
 module.exports = DB;
