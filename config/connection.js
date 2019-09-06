@@ -8,8 +8,7 @@ const localConfig = {
     database: 'burgers_db'
 };
 
-const dbConfig =
-    mysql.env && mysql.env.JAWSDB_URL ? mysql.env.JAWSDB_URL : localConfig;
+const dbConfig = process.env.JAWSDB_URL || localConfig;
 
 const DB = mysql.createConnection(dbConfig);
 
