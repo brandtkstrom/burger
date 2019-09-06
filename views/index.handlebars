@@ -1,14 +1,15 @@
-<div id="container">
-
-    <div id="uneaten">
-        {{#each uneaten}}
-                <p>{{this.burger_name}}</p>
-        {{/each}}
-    </div>
-    <div id="eaten">
-        {{#each devoured}}
-            <p>{{this.burger_name}}</p>
-        {{/each}}
-    </div>
-
+<div id="uneaten">
+    {{#each uneaten}}
+        <div class="burger">
+            <button id="{{this.id}}" class="devour">Devour!</button>
+            <span class="burger">{{this.burger_name}}</span>
+        </div>
+    {{/each}}
+</div>
+<div id="eaten">
+    {{#each devoured}}
+        <div class="burger devoured">
+            <span class="burger">{{this.burger_name}}</span>
+        </div>
+    {{/each}}
 </div>

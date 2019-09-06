@@ -15,13 +15,21 @@
         <h1>Eat the Burger!</h1>
     </header>
 
+    <hr>
+
     {{!-- Burgers rendered here --}}
-    {{{ body }}}
+    <div id="container">
+
+        {{{ body }}}
+
+    </div>
 
     <form>
         <input type="text" id="input-burger">
         <br>
         <input type="submit" value="Add Burger" id="submit-burger">
+        <hr>
+        <button id="button-reset">Reset</button>
     </form>
 
     {{!-- Load script --}}
