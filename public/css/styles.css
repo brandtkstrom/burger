@@ -5,11 +5,16 @@
 
 body {
     font-family: 'Fira Sans', sans-serif;
-    background-color: rgb(255, 153, 125)
+    background-color: coral;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 50px;
+}
+
+hr {
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 header {
@@ -23,31 +28,71 @@ img {
 
 form {
     text-align: center;
+    padding: 10px;
 }
 
 form input {
-    margin-bottom: 20px;
+    margin: 10px;
     font-size: 18px;
-    border-radius: 10px;
 }
 
 form #input-burger {
     width: 300px;
     line-height: 2;
     text-align: center;
-
+    text-transform: capitalize;
 }
 
-form #submit-burger {
+form #submit-burger,
+form #button-reset {
     padding: 10px 20px;
     cursor: pointer;
 }
 
 #container {
+    background-color: tomato;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 800px;
     margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
 }
 
+button.devour {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: linear 200ms;
+
+}
+
+button.devour:hover {
+    background-color: lightgreen;
+    border-color: black;
+    cursor: pointer;
+}
+
+div.burger {
+    max-width: 300px;
+    margin: 10px 0;
+    background-color: white;
+    padding-right: 10px;
+}
+
+div.burger.devoured {
+    padding: 10px;
+    background-color: lightgray;
+    color: gray;
+}
+
+span.burger {
+    padding: 0 5px;
+    text-transform: capitalize;
+}
+
+.devoured {
+    padding: 10px;
+    background-color: red;
+}
