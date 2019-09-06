@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: rgb(255, 153, 125)
+}
+
+h1 {
+    font-size: 36px;
+}
+
+header {
+    text-align: center;
+}
+
+img {
+    max-width: 200px;
+    max-height: auto;
+}
+
+form {
+    text-align: center;
+}
+
+form input {
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+form #input-burger {
+    width: 300px;
+    line-height: 2;
+    text-align: center;
+
+}
+
+form #submit-burger {
+    padding: 10px 20px;
+    cursor: pointer;
+}
