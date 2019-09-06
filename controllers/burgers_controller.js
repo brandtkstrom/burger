@@ -3,4 +3,8 @@ const router = express.Router();
 
 // TODO define routes
 
+router.get('/', (req,res) => {
+    res.render('index');
+});
+
 module.exports = router;
